@@ -1,0 +1,624 @@
+{
+  "employees": [
+    {
+      "id": "fd29",
+      "employeeName": "vivek",
+      "employeeId": "emp-1",
+      "company": "TATA",
+      "role": "fullstack",
+      "email": "endlavivek81@gmail.com",
+      "phone": "9652201105",
+      "password": "123456",
+      "createdAt": "2025-05-08T05:23:02.242Z"
+    },
+    {
+      "id": "b75b",
+      "employeeName": "max",
+      "employeeId": "emp-2",
+      "company": "oracle",
+      "role": "developer",
+      "email": "endlavivek69@gmail.com",
+      "phone": "9652201105",
+      "password": "123456",
+      "createdAt": "2025-05-08T05:56:03.278Z"
+    }
+  ],
+  "newjobs": [],
+  "joblists": [
+    {
+      "id": "1",
+      "company_name": "TechNova Solutions",
+      "job_role": "Frontend Developer",
+      "skills": [
+        "HTML",
+        "CSS",
+        "JavaScript",
+        "React"
+      ],
+      "location": "Bangalore, India",
+      "salary": "₹6,00,000 - ₹8,00,000 per annum",
+      "description": "We're looking for a creative and detail-oriented frontend developer to design and develop user-friendly web interfaces using modern frameworks like React.",
+      "job_type": "Full-time",
+      "experience_level": "Entry",
+      "posted_date": "2025-04-25",
+      "company_image": "https://logo.clearbit.com/vercel.com",
+      "about_company": "TechNova Solutions is a leading software development company specializing in building innovative web applications for clients across various industries. Founded in 2015, we have grown to a team of 200+ professionals delivering cutting-edge solutions.",
+      "job_highlights": [
+        "Work on modern React applications",
+        "Collaborate with UX designers",
+        "Participate in code reviews",
+        "Flexible work hours",
+        "Annual learning budget"
+      ],
+      "responsibilities": [
+        "Develop new user-facing features",
+        "Build reusable components",
+        "Optimize applications for performance",
+        "Collaborate with backend developers",
+        "Implement responsive design"
+      ],
+      "requirements": [
+        "1+ years of React experience",
+        "Proficient in JavaScript",
+        "Understanding of REST APIs",
+        "Familiarity with Git",
+        "Bachelor's degree in CS or related field"
+      ]
+    },
+    {
+      "id": "2",
+      "company_name": "DataCraft Inc.",
+      "job_role": "Data Engineer",
+      "skills": [
+        "Python",
+        "SQL",
+        "Apache Spark",
+        "ETL Pipelines"
+      ],
+      "location": "Hyderabad, India",
+      "salary": "₹10,00,000 - ₹13,00,000 per annum",
+      "description": "Join our data engineering team to build robust data pipelines and optimize data flow across our enterprise systems.",
+      "job_type": "Full-time",
+      "experience_level": "Mid",
+      "posted_date": "2025-04-24",
+      "company_image": "https://logo.clearbit.com/databricks.com",
+      "about_company": "DataCraft Inc. is a data solutions provider helping enterprises make data-driven decisions. We specialize in big data technologies and cloud-based data platforms with clients in finance, healthcare, and e-commerce sectors.",
+      "job_highlights": [
+        "Work with cutting-edge data technologies",
+        "Competitive compensation package",
+        "Health and wellness benefits",
+        "Professional development opportunities",
+        "Hybrid work model"
+      ],
+      "responsibilities": [
+        "Design and implement data pipelines",
+        "Optimize data storage and retrieval",
+        "Ensure data quality and integrity",
+        "Collaborate with data scientists",
+        "Monitor data systems performance"
+      ],
+      "requirements": [
+        "3+ years of data engineering experience",
+        "Strong Python and SQL skills",
+        "Experience with Spark or similar",
+        "Knowledge of cloud platforms",
+        "Understanding of data modeling"
+      ]
+    },
+    {
+      "id": "3",
+      "company_name": "GreenCore Technologies",
+      "job_role": "DevOps Engineer",
+      "skills": [
+        "AWS",
+        "Docker",
+        "Kubernetes",
+        "CI/CD"
+      ],
+      "location": "Pune, India",
+      "salary": "₹9,00,000 - ₹12,00,000 per annum",
+      "description": "We are seeking a DevOps Engineer to manage our cloud infrastructure, automate deployments, and improve system reliability.",
+      "job_type": "Full-time",
+      "experience_level": "Mid",
+      "posted_date": "2025-04-23",
+      "company_image": "https://logo.clearbit.com/hashicorp.com",
+      "about_company": "GreenCore Technologies provides sustainable tech solutions with a focus on cloud optimization and green computing. We help companies reduce their carbon footprint through efficient infrastructure.",
+      "job_highlights": [
+        "Work with latest cloud technologies",
+        "ESOP options available",
+        "Certification reimbursement",
+        "Remote work flexibility",
+        "Performance bonuses"
+      ],
+      "responsibilities": [
+        "Implement CI/CD pipelines",
+        "Manage Kubernetes clusters",
+        "Automate infrastructure provisioning",
+        "Monitor system performance",
+        "Ensure high availability"
+      ],
+      "requirements": [
+        "2+ years DevOps experience",
+        "Hands-on with AWS/GCP",
+        "Containerization expertise",
+        "Infrastructure as Code knowledge",
+        "Troubleshooting skills"
+      ]
+    },
+    {
+      "id": "4",
+      "company_name": "EduSmart Pvt Ltd",
+      "job_role": "Python Intern",
+      "skills": [
+        "Python",
+        "Flask",
+        "SQL"
+      ],
+      "location": "Remote",
+      "salary": "₹15,000 per month",
+      "description": "Looking for enthusiastic interns to assist in backend development and gain hands-on experience with Python and Flask applications.",
+      "job_type": "Internship",
+      "experience_level": "Entry",
+      "posted_date": "2025-04-22",
+      "company_image": "https://logo.clearbit.com/udemy.com",
+      "about_company": "EduSmart is an ed-tech startup revolutionizing online learning through interactive platforms and personalized learning experiences. Our team consists of passionate educators and technologists.",
+      "job_highlights": [
+        "Mentorship from senior developers",
+        "Flexible working hours",
+        "Potential full-time offer",
+        "Stipend with performance bonuses",
+        "Work on live projects"
+      ],
+      "responsibilities": [
+        "Assist in backend development",
+        "Write clean, maintainable code",
+        "Participate in code reviews",
+        "Debug and fix issues",
+        "Document code and processes"
+      ],
+      "requirements": [
+        "Basic Python knowledge",
+        "Understanding of web concepts",
+        "Currently pursuing degree",
+        "Eagerness to learn",
+        "6-month commitment"
+      ]
+    },
+    {
+      "id": "5",
+      "company_name": "NeoBank India",
+      "job_role": "Backend Developer",
+      "skills": [
+        "Node.js",
+        "MongoDB",
+        "Express.js"
+      ],
+      "location": "Mumbai, India",
+      "salary": "₹8,50,000 - ₹10,00,000 per annum",
+      "description": "Build scalable backend APIs and manage database integrations for our fintech products.",
+      "job_type": "Full-time",
+      "experience_level": "Mid",
+      "posted_date": "2025-04-21",
+      "company_image": "https://logo.clearbit.com/revolut.com",
+      "about_company": "NeoBank India is a digital-first financial institution offering innovative banking solutions. We combine technology with financial expertise to create seamless banking experiences.",
+      "job_highlights": [
+        "Work on financial products",
+        "Stock options available",
+        "Health insurance coverage",
+        "Learning and development budget",
+        "Fast-paced environment"
+      ],
+      "responsibilities": [
+        "Develop RESTful APIs",
+        "Optimize database queries",
+        "Implement security measures",
+        "Write unit and integration tests",
+        "Collaborate with frontend team"
+      ],
+      "requirements": [
+        "2+ years Node.js experience",
+        "MongoDB/PostgreSQL knowledge",
+        "Understanding of microservices",
+        "API design skills",
+        "Financial domain interest"
+      ]
+    },
+    {
+      "id": "6",
+      "company_name": "Visionary AI Labs",
+      "job_role": "Machine Learning Engineer",
+      "skills": [
+        "Python",
+        "TensorFlow",
+        "Scikit-learn",
+        "Pandas"
+      ],
+      "location": "Chennai, India",
+      "salary": "₹12,00,000 - ₹15,00,000 per annum",
+      "description": "Design and train ML models for real-world applications in image recognition and NLP.",
+      "job_type": "Full-time",
+      "experience_level": "Senior",
+      "posted_date": "2025-04-20",
+      "company_image": "https://logo.clearbit.com/huggingface.co",
+      "about_company": "Visionary AI Labs pioneers artificial intelligence solutions for enterprise clients. Our team of PhDs and engineers builds state-of-the-art models for complex business problems.",
+      "job_highlights": [
+        "Cutting-edge AI research",
+        "Conference participation",
+        "High-performance computing",
+        "Competitive compensation",
+        "Publication opportunities"
+      ],
+      "responsibilities": [
+        "Develop ML models",
+        "Preprocess and analyze data",
+        "Optimize model performance",
+        "Deploy models to production",
+        "Mentor junior engineers"
+      ],
+      "requirements": [
+        "4+ years ML experience",
+        "Advanced degree preferred",
+        "Strong math background",
+        "Production deployment experience",
+        "Research publications a plus"
+      ]
+    },
+    {
+      "id": "7",
+      "company_name": "CyberSecure Inc.",
+      "job_role": "Cybersecurity Analyst",
+      "skills": [
+        "Network Security",
+        "SIEM",
+        "Firewalls"
+      ],
+      "location": "Gurgaon, India",
+      "salary": "₹9,00,000 - ₹11,00,000 per annum",
+      "description": "Monitor systems for security incidents and respond to threats in real-time.",
+      "job_type": "Full-time",
+      "experience_level": "Mid",
+      "posted_date": "2025-04-19",
+      "company_image": "https://logo.clearbit.com/cloudflare.com",
+      "about_company": "CyberSecure provides comprehensive security solutions to Fortune 500 companies. Our team of ethical hackers and security experts protect critical infrastructure from cyber threats.",
+      "job_highlights": [
+        "Cutting-edge security tools",
+        "Continuous training",
+        "Global client exposure",
+        "Certification support",
+        "Incident response experience"
+      ],
+      "responsibilities": [
+        "Monitor security systems",
+        "Investigate incidents",
+        "Implement security controls",
+        "Conduct vulnerability scans",
+        "Prepare security reports"
+      ],
+      "requirements": [
+        "3+ years security experience",
+        "SIEM tools knowledge",
+        "Network protocols understanding",
+        "Relevant certifications",
+        "Incident response skills"
+      ]
+    },
+    {
+      "id": "8",
+      "company_name": "CloudWare Pvt Ltd",
+      "job_role": "Cloud Architect",
+      "skills": [
+        "AWS",
+        "Azure",
+        "Infrastructure as Code",
+        "Terraform"
+      ],
+      "location": "Delhi, India",
+      "salary": "₹18,00,000 - ₹22,00,000 per annum",
+      "description": "Design and implement robust cloud solutions tailored to enterprise-level deployments.",
+      "job_type": "Full-time",
+      "experience_level": "Senior",
+      "posted_date": "2025-04-18",
+      "company_image": "https://logo.clearbit.com/terraform.io",
+      "about_company": "CloudWare is a premier cloud consulting firm helping businesses migrate and optimize their cloud infrastructure. We partner with AWS, Azure, and GCP to deliver best-in-class solutions.",
+      "job_highlights": [
+        "Architect complex systems",
+        "Lead cloud strategy",
+        "Work with enterprise clients",
+        "Generous bonus structure",
+        "Technical leadership role"
+      ],
+      "responsibilities": [
+        "Design cloud architectures",
+        "Lead migration projects",
+        "Optimize cloud spend",
+        "Establish best practices",
+        "Mentor team members"
+      ],
+      "requirements": [
+        "7+ years cloud experience",
+        "Multi-cloud expertise",
+        "Architecture certification",
+        "Consulting background",
+        "Leadership skills"
+      ]
+    },
+    {
+      "id": "9",
+      "company_name": "Quantium Analytics",
+      "job_role": "Business Analyst",
+      "skills": [
+        "SQL",
+        "Excel",
+        "Power BI",
+        "Data Visualization"
+      ],
+      "location": "Kolkata, India",
+      "salary": "₹6,50,000 - ₹8,00,000 per annum",
+      "description": "Interpret data, analyze results, and provide insights for business decision-making.",
+      "job_type": "Full-time",
+      "experience_level": "Entry",
+      "posted_date": "2025-04-17",
+      "company_image": "https://logo.clearbit.com/microsoft.com",
+      "about_company": "Quantium Analytics transforms raw data into actionable business intelligence. We help organizations across industries make data-driven decisions through advanced analytics.",
+      "job_highlights": [
+        "Cross-functional exposure",
+        "Business intelligence focus",
+        "Stakeholder management",
+        "Career growth path",
+        "Diverse industry projects"
+      ],
+      "responsibilities": [
+        "Analyze business data",
+        "Create dashboards",
+        "Identify trends",
+        "Prepare reports",
+        "Present findings"
+      ],
+      "requirements": [
+        "1+ years analytics experience",
+        "Strong Excel skills",
+        "BI tool experience",
+        "Communication skills",
+        "Business acumen"
+      ]
+    },
+    {
+      "id": "10",
+      "company_name": "Mobitech Global",
+      "job_role": "Android Developer",
+      "skills": [
+        "Kotlin",
+        "Java",
+        "Android Studio"
+      ],
+      "location": "Ahmedabad, India",
+      "salary": "₹5,50,000 - ₹7,00,000 per annum",
+      "description": "Develop and maintain mobile applications for Android devices with modern UI/UX.",
+      "job_type": "Full-time",
+      "experience_level": "Entry",
+      "posted_date": "2025-04-16",
+      "company_image": "https://logo.clearbit.com/android.com",
+      "about_company": "Mobitech Global creates innovative mobile solutions for global clients. Our apps serve millions of users across e-commerce, healthcare, and entertainment sectors.",
+      "job_highlights": [
+        "Work on popular apps",
+        "Modern tech stack",
+        "UI/UX collaboration",
+        "App store exposure",
+        "Performance bonuses"
+      ],
+      "responsibilities": [
+        "Develop Android apps",
+        "Implement new features",
+        "Fix bugs",
+        "Optimize performance",
+        "Follow best practices"
+      ],
+      "requirements": [
+        "1+ years Android development",
+        "Kotlin/Java proficiency",
+        "Understanding of Material Design",
+        "REST API integration",
+        "Problem-solving skills"
+      ]
+    },
+    {
+      "id": "11",
+      "company_name": "DesignDome Studios",
+      "job_role": "UI/UX Designer",
+      "skills": [
+        "Figma",
+        "Adobe XD",
+        "User Research"
+      ],
+      "location": "Hyderabad, India",
+      "salary": "₹6,00,000 - ₹7,50,000 per annum",
+      "description": "Create engaging designs for web and mobile apps through user-centric design principles.",
+      "job_type": "Full-time",
+      "experience_level": "Mid",
+      "posted_date": "2025-04-15",
+      "company_image": "https://logo.clearbit.com/figma.com",
+      "about_company": "DesignDome Studios is a creative agency specializing in digital product design. We combine aesthetics with functionality to deliver exceptional user experiences.",
+      "job_highlights": [
+        "Creative freedom",
+        "Diverse project portfolio",
+        "Design system work",
+        "User research opportunities",
+        "Prototyping tools"
+      ],
+      "responsibilities": [
+        "Create wireframes",
+        "Design interfaces",
+        "Conduct user testing",
+        "Collaborate with developers",
+        "Maintain design systems"
+      ],
+      "requirements": [
+        "3+ years design experience",
+        "Portfolio required",
+        "Prototyping skills",
+        "User research knowledge",
+        "Team collaboration"
+      ]
+    },
+    {
+      "id": "12",
+      "company_name": "QuickCart Pvt Ltd",
+      "job_role": "Full Stack Developer",
+      "skills": [
+        "JavaScript",
+        "Node.js",
+        "React",
+        "MongoDB"
+      ],
+      "location": "Remote",
+      "salary": "₹7,50,000 - ₹9,00,000 per annum",
+      "description": "Build full-stack web applications and contribute to all stages of product development.",
+      "job_type": "Full-time",
+      "experience_level": "Mid",
+      "posted_date": "2025-04-14",
+      "company_image": "https://logo.clearbit.com/netlify.com",
+      "about_company": "QuickCart powers e-commerce solutions for small and medium businesses. Our platform helps merchants establish and grow their online presence.",
+      "job_highlights": [
+        "Full-stack exposure",
+        "Remote-first culture",
+        "Product development",
+        "Agile environment",
+        "Technical ownership"
+      ],
+      "responsibilities": [
+        "Develop features end-to-end",
+        "Write clean code",
+        "Debug issues",
+        "Optimize performance",
+        "Participate in planning"
+      ],
+      "requirements": [
+        "3+ years full-stack experience",
+        "Proficient in MERN stack",
+        "Database knowledge",
+        "Problem-solving ability",
+        "Self-motivation"
+      ]
+    },
+    {
+      "id": "13",
+      "company_name": "BioGenTech",
+      "job_role": "Data Scientist",
+      "skills": [
+        "Python",
+        "Statistics",
+        "Numpy",
+        "Machine Learning"
+      ],
+      "location": "Bangalore, India",
+      "salary": "₹11,00,000 - ₹14,00,000 per annum",
+      "description": "Analyze large datasets in healthcare and contribute to cutting-edge bioinformatics research.",
+      "job_type": "Full-time",
+      "experience_level": "Senior",
+      "posted_date": "2025-04-13",
+      "company_image": "https://logo.clearbit.com/kaggle.com",
+      "about_company": "BioGenTech applies AI and machine learning to solve complex problems in biotechnology and healthcare. Our interdisciplinary team works at the intersection of biology and data science.",
+      "job_highlights": [
+        "Meaningful healthcare impact",
+        "Research publications",
+        "High-performance computing",
+        "Interdisciplinary collaboration",
+        "Conference participation"
+      ],
+      "responsibilities": [
+        "Analyze biological data",
+        "Develop predictive models",
+        "Communicate findings",
+        "Collaborate with biologists",
+        "Stay current with research"
+      ],
+      "requirements": [
+        "5+ years data science experience",
+        "Advanced degree preferred",
+        "Healthcare domain knowledge",
+        "Statistical modeling expertise",
+        "Python proficiency"
+      ]
+    },
+    {
+      "id": "14",
+      "company_name": "FinEdge Technologies",
+      "job_role": "QA Automation Engineer",
+      "skills": [
+        "Selenium",
+        "JUnit",
+        "TestNG",
+        "CI/CD"
+      ],
+      "location": "Chandigarh, India",
+      "salary": "₹5,00,000 - ₹6,50,000 per annum",
+      "description": "Automate testing workflows to ensure high-quality releases in our fintech applications.",
+      "job_type": "Full-time",
+      "experience_level": "Mid",
+      "posted_date": "2025-04-12",
+      "company_image": "https://logo.clearbit.com/browserstack.com",
+      "about_company": "FinEdge provides technology solutions for the financial services industry. Our quality assurance team ensures our products meet the highest standards of reliability and security.",
+      "job_highlights": [
+        "Test automation focus",
+        "Financial domain exposure",
+        "Performance testing",
+        "Continuous learning",
+        "Stable work environment"
+      ],
+      "responsibilities": [
+        "Write test cases",
+        "Develop automation scripts",
+        "Execute test plans",
+        "Report defects",
+        "Improve processes"
+      ],
+      "requirements": [
+        "3+ years QA experience",
+        "Automation framework knowledge",
+        "Programming skills",
+        "Attention to detail",
+        "Financial domain interest"
+      ]
+    },
+    {
+      "id": "15",
+      "company_name": "RoboAI Systems",
+      "job_role": "Embedded Systems Engineer",
+      "skills": [
+        "C",
+        "Embedded C",
+        "Microcontrollers",
+        "RTOS"
+      ],
+      "location": "Coimbatore, India",
+      "salary": "₹7,00,000 - ₹9,00,000 per annum",
+      "description": "Develop firmware and low-level code for embedded AI hardware systems.",
+      "job_type": "Full-time",
+      "experience_level": "Mid",
+      "posted_date": "2025-04-11",
+      "company_image": "https://logo.clearbit.com/arm.com",
+      "about_company": "RoboAI builds intelligent embedded systems for industrial automation and robotics. Our engineers work at the hardware-software boundary to create innovative solutions.",
+      "job_highlights": [
+        "Cutting-edge hardware",
+        "AI at the edge",
+        "Performance optimization",
+        "Cross-disciplinary work",
+        "Product development"
+      ],
+      "responsibilities": [
+        "Develop embedded software",
+        "Optimize system performance",
+        "Debug hardware issues",
+        "Implement RTOS features",
+        "Document designs"
+      ],
+      "requirements": [
+        "4+ years embedded experience",
+        "Strong C programming",
+        "Microcontroller expertise",
+        "Hardware understanding",
+        "Problem-solving skills"
+      ]
+    }
+  ]
+}
