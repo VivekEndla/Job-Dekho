@@ -15,7 +15,6 @@ const Profile = () => {
 
   useEffect(() => {
     const stored = JSON.parse(localStorage.getItem('employee'));
-
     if (stored?.employeeId) {
       fetch(`https://job-portal-data.onrender.com/employees?employeeId=${stored.employeeId}`)
         .then(res => res.json())
@@ -47,7 +46,7 @@ const Profile = () => {
   };
 
   const handleSave = () => {
-    fetch(`https://job-portal-data.onrender.com/employees/${employee.id}`, {
+    fetch(`https://job-portal-data.onrender.com/employees/${employee.employeeId}`, {
       method: 'PUT',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify(employee)
@@ -64,20 +63,10 @@ const Profile = () => {
 
   return (
     <div style={{ display: 'flex', minHeight: '100vh', backgroundColor: '#f8f9fa' }}>
-      {/* Sidebar */}
-      <div style={{
-        width: '250px',
-        backgroundColor: '#343a40',
-        color: 'white',
-        padding: '20px 0',
-        position: 'sticky',
-        top: 0,
-        height: '100vh'
-      }}>
+      <div style={{   color: 'white',  position: 'sticky', top: 0, height: '100vh' }}>
         <Esidebar />
       </div>
 
-      {/* Main Content */}
       <div style={{ flex: 1, padding: '20px' }}>
         <div style={{
           maxWidth: '800px',
@@ -103,9 +92,7 @@ const Profile = () => {
               padding: '5px 10px',
               borderRadius: '4px',
               cursor: 'pointer'
-            }}>
-              ← Back
-            </button>
+            }}>← Back</button>
           </div>
 
           <div style={{ textAlign: 'center', marginBottom: '30px' }}>
@@ -121,6 +108,11 @@ const Profile = () => {
                 boxShadow: '0 2px 5px rgba(0,0,0,0.2)'
               }}
             />
+            {isEditing && (
+              <div style={{ marginTop: '10px' }}>
+                <input type="file" accept="image/*" onChange={handleImageChange} />
+              </div>
+            )}
           </div>
 
           {['employeeName', 'role', 'email', 'phone'].map(field => (

@@ -17,21 +17,26 @@ const Navbar = ({ isLoggedIn, setIsLoggedIn }) => {
   return (
     <nav className="navbar navbar-expand-lg navbar-dark bg-dark shadow-sm sticky-top">
       <div className="container">
-        <NavLink to="/" className="navbar-brand d-flex align-items-center fw-bold fs-3 text-danger">JOBDEKHO</NavLink>
+        {/* Brand */}
+        <NavLink to="/" className="navbar-brand d-flex align-items-center fw-bold fs-3 text-danger">
+          JOBDEKHO
+        </NavLink>
 
+        {/* Toggler */}
         <button
           className="navbar-toggler"
           type="button"
           data-bs-toggle="collapse"
-          data-bs-target="#navbarNav"
-          aria-controls="navbarNav"
+          data-bs-target="#navbarNavAltMarkup"
+          aria-controls="navbarNavAltMarkup"
           aria-expanded="false"
           aria-label="Toggle navigation"
         >
           <span className="navbar-toggler-icon" />
         </button>
 
-        <div className="collapse navbar-collapse" id="navbarNav">
+        {/* Collapsible content */}
+        <div className="collapse navbar-collapse" id="navbarNavAltMarkup">
           <ul className="navbar-nav mx-auto mb-2 mb-lg-0 gap-3">
             <li className="nav-item">
               <NavLink className="nav-link" to="/">
@@ -44,7 +49,7 @@ const Navbar = ({ isLoggedIn, setIsLoggedIn }) => {
               </NavLink>
             </li>
             <li className="nav-item">
-              <NavLink className="nav-link" to={isLoggedIn ? "/Joblisting" : "/login"}>
+              <NavLink className="nav-link" to={isLoggedIn ? '/Joblisting' : '/login'}>
                 Findjob
               </NavLink>
             </li>
@@ -55,18 +60,22 @@ const Navbar = ({ isLoggedIn, setIsLoggedIn }) => {
             </li>
           </ul>
 
-          <div className="d-flex mx-3">
-             <NavLink className='btn btn-primary' to='/Eregister' >
-                Employee
-             </NavLink>
+          {/* Employee Button */}
+          <div className='d-flex gap-2 mt-3 mt-lg-0'>
+            <div >
+            <NavLink className="btn btn-outline-light" to="/Eregister">
+              Employee
+            </NavLink>
           </div>
 
-          <div className="d-flex">
-            <button className='btn btn-primary' onClick={handleLog}>
+          {/* Login / Logout Button */}
+          <div >
+            <button className="btn btn-outline-light" onClick={handleLog}>
               {isLoggedIn ? 'Logout' : 'Login'}
             </button>
           </div>
-         
+          </div>
+          
         </div>
       </div>
     </nav>

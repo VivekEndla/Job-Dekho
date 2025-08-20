@@ -5,7 +5,7 @@ const Settings = () => {
   return (
     <div style={{ display: 'flex', minHeight: '100vh' }}>
       {/* Sidebar */}
-      <div style={{ width: '250px', borderRight: '1px solid #ddd' }}>
+      <div style={{ }}>
         <Esidebar />
       </div>
 

@@ -1,14 +1,31 @@
-  import React from 'react';
+import React, { useState } from 'react';
 
-  const Sidebar = () => {
-    return (
+const Sidebar = () => {
+  const [isOpen, setIsOpen] = useState(false);
+
+  return (
+    <>
+      {/* Toggle Button (visible only on small screens) */}
+      <div className="d-flex justify-content-end d-md-none mb-3">
+        <button
+          className="btn btn-outline-secondary"
+          onClick={() => setIsOpen(!isOpen)}
+        >
+          <i className="bi bi-filter"></i> Filters
+        </button>
+      </div>
+
+      {/* Sidebar */}
       <div
-        className="p-4 bg-light h-100"
+        className={`p-4 bg-light h-100 ${
+          isOpen ? 'd-block' : 'd-none'
+        } d-md-block`}
         style={{
           position: 'sticky',
           top: 0,
           borderRight: '1px solid #dee2e6',
-          overflowY: 'auto'
+          overflowY: 'auto',
+          maxHeight: '100vh'
         }}
       >
         <div className="d-flex justify-content-between align-items-center mb-4">
@@ -16,19 +33,19 @@
           <button className="btn btn-sm btn-outline-secondary">Reset All</button>
         </div>
 
-        
-
         {/* Location */}
         <div className="mb-4">
           <label className="form-label fw-bold">Location</label>
-          <input 
-            type="text" 
-            className="form-control mb-2" 
+          <input
+            type="text"
+            className="form-control mb-2"
             placeholder="City or country"
           />
           <div className="form-check">
             <input className="form-check-input" type="checkbox" id="remote" />
-            <label className="form-check-label" htmlFor="remote">Remote Only</label>
+            <label className="form-check-label" htmlFor="remote">
+              Remote Only
+            </label>
           </div>
         </div>
 
@@ -151,7 +168,8 @@
           <i className="bi bi-save me-2"></i>Save Search
         </button>
       </div>
-    );
-  };
+    </>
+  );
+};
 
-  export default Sidebar;
+export default Sidebar;

@@ -114,7 +114,7 @@ const Postedjobs = () => {
 
   return (
     <div style={{ display: 'flex', minHeight: '100vh' }}>
-      <div style={{ width: '250px', backgroundColor: '#343a40' }}>
+      <div style={{}}>
         <Esidebar />
       </div>
 

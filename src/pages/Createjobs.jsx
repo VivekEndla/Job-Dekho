@@ -25,29 +25,27 @@ const Createjobs = () => {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [serverError, setServerError] = useState('');
 
-  const [tempSkill, setTempSkill] = useState('');
-  const [tempHighlight, setTempHighlight] = useState('');
-  const [tempResponsibility, setTempResponsibility] = useState('');
-  const [tempRequirement, setTempRequirement] = useState('');
+  const [tempInputs, setTempInputs] = useState({
+    skills: '',
+    job_highlights: '',
+    responsibilities: '',
+    requirements: '',
+  });
 
   const handleChange = (e) => {
     const { name, value } = e.target;
-    setFormData({
-      ...formData,
-      [name]: value
-    });
-    if (errors[name]) {
-      setErrors({ ...errors, [name]: '' });
-    }
+    setFormData({ ...formData, [name]: value });
+    if (errors[name]) setErrors({ ...errors, [name]: '' });
   };
 
-  const handleArrayInput = (type, value, setValue) => {
-    if (!value.trim()) return;
+  const handleArrayInput = (type) => {
+    const value = tempInputs[type].trim();
+    if (!value) return;
     setFormData((prev) => ({
       ...prev,
-      [type]: [...prev[type], value.trim()],
+      [type]: [...prev[type], value],
     }));
-    setValue('');
+    setTempInputs((prev) => ({ ...prev, [type]: '' }));
   };
 
   const removeArrayItem = (type, index) => {
@@ -92,24 +90,25 @@ const Createjobs = () => {
     }
   };
 
-  const renderArrayField = (label, tempValue, setTempValue, arrayKey) => (
+  const renderArrayField = (label, type) => (
     <div style={{ marginBottom: '15px' }}>
       <label>{label}</label>
       <div style={{ display: 'flex', gap: '10px', marginTop: '5px' }}>
         <input
           type="text"
-          value={tempValue}
-          onChange={(e) => setTempValue(e.target.value)}
+          value={tempInputs[type]}
+          onChange={(e) => setTempInputs({ ...tempInputs, [type]: e.target.value })}
           placeholder={`Add ${label.toLowerCase()}`}
           style={{ flex: 1, padding: '8px' }}
         />
-        <button type="button" onClick={() => handleArrayInput(arrayKey, tempValue, setTempValue)}>Add</button>
+        <button type="button" onClick={() => handleArrayInput(type)}>Add</button>
       </div>
+      {errors[type] && <div style={{ color: 'red' }}>{errors[type]}</div>}
       <div style={{ marginTop: '5px' }}>
-        {formData[arrayKey].map((item, index) => (
+        {formData[type].map((item, index) => (
           <span key={index} style={{ marginRight: '8px', background: '#0d6efd', color: '#fff', padding: '5px 10px', borderRadius: '20px', display: 'inline-block' }}>
             {item}
-            <button onClick={() => removeArrayItem(arrayKey, index)} style={{ marginLeft: '8px', background: 'transparent', color: '#fff', border: 'none', cursor: 'pointer' }}>×</button>
+            <button onClick={() => removeArrayItem(type, index)} style={{ marginLeft: '8px', background: 'transparent', color: '#fff', border: 'none', cursor: 'pointer' }}>×</button>
           </span>
         ))}
       </div>
@@ -118,7 +117,7 @@ const Createjobs = () => {
 
   return (
     <div style={{ display: 'flex', minHeight: '100vh' }}>
-      <div style={{ width: '250px', borderRight: '1px solid #ddd' }}>
+      <div style={{ }}>
         <Esidebar />
       </div>
       <div style={{ flex: 1, padding: '30px' }}>
@@ -129,7 +128,6 @@ const Createjobs = () => {
           <div style={{ padding: '20px' }}>
             {serverError && <div style={{ color: 'red' }}>{serverError}</div>}
             <form onSubmit={handleSubmit}>
-              {/* Basic Info */}
               <div style={{ display: 'flex', gap: '20px', marginBottom: '15px' }}>
                 <div style={{ flex: 1 }}>
                   <label>Company Name</label>
@@ -143,7 +141,7 @@ const Createjobs = () => {
                 </div>
               </div>
 
-              {renderArrayField('Skills', tempSkill, setTempSkill, 'skills')}
+              {renderArrayField('Skills', 'skills')}
 
               <div style={{ display: 'flex', gap: '20px', marginBottom: '15px' }}>
                 <div style={{ flex: 1 }}>
@@ -188,12 +186,15 @@ const Createjobs = () => {
                 </div>
               </div>
 
-              {/* Additional Arrays */}
-              {renderArrayField('Highlights', tempHighlight, setTempHighlight, 'job_highlights')}
-              {renderArrayField('Responsibilities', tempResponsibility, setTempResponsibility, 'responsibilities')}
-              {renderArrayField('Requirements', tempRequirement, setTempRequirement, 'requirements')}
+              {renderArrayField('Highlights', 'job_highlights')}
+              {renderArrayField('Responsibilities', 'responsibilities')}
+              {renderArrayField('Requirements', 'requirements')}
 
-              <button type="submit" style={{ padding: '10px 20px', backgroundColor: '#0d6efd', color: '#fff', border: 'none', borderRadius: '4px', marginTop: '20px' }} disabled={isSubmitting}>
+              <button
+                type="submit"
+                style={{ padding: '10px 20px', backgroundColor: '#0d6efd', color: '#fff', border: 'none', borderRadius: '4px', marginTop: '20px' }}
+                disabled={isSubmitting}
+              >
                 {isSubmitting ? 'Creating...' : 'Create Job'}
               </button>
             </form>

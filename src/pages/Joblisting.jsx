@@ -3,8 +3,8 @@ import { useNavigate } from 'react-router-dom';
 import Sidebar from '../components/Sidebar';
 
 const Joblisting = () => {
-  const [joblists, setJoblists] = useState([]); // Job listings from db.json
-  const [postedJobs, setPostedJobs] = useState([]); // Posted jobs (from another source, e.g., localStorage or another API)
+  const [joblists, setJoblists] = useState([]); // Job listings from /joblists
+  const [postedJobs, setPostedJobs] = useState([]); // Posted jobs from /newjobs
   const [filteredJobs, setFilteredJobs] = useState([]);
   const [searchTerm, setSearchTerm] = useState('');
   const [currentPage, setCurrentPage] = useState(1);
@@ -12,27 +12,29 @@ const Joblisting = () => {
   const navigate = useNavigate();
 
   useEffect(() => {
-    // Fetch job listings (this could be from a server or db.json)
-    fetch('https://job-portal-data.onrender.com')
-      .then((res) => res.json())
-      .then((data) => {
-        setJoblists(data.joblists || []);
-        setPostedJobs(data.newjobs || []); // Assuming "newjobs" are the posted jobs
-        setFilteredJobs([...data.joblists, ...data.newjobs || []]); // Combine both job listings
+    // Fetch both joblists and newjobs from Render JSON server
+    Promise.all([
+      fetch('https://job-portal-data.onrender.com/joblists').then(res => res.json()),
+      fetch('https://job-portal-data.onrender.com/newjobs').then(res => res.json())
+    ])
+      .then(([joblistsData, newjobsData]) => {
+        setJoblists(joblistsData || []);
+        setPostedJobs(newjobsData || []);
+        setFilteredJobs([...(joblistsData || []), ...(newjobsData || [])]);
       })
       .catch((err) => console.error('Error loading job data:', err));
   }, []);
 
   // Filter jobs based on search term
   useEffect(() => {
-    const combinedJobs = [...joblists, ...postedJobs]; // Combine both job lists
+    const combinedJobs = [...joblists, ...postedJobs];
     const filtered = combinedJobs.filter((job) =>
       job.job_role.toLowerCase().includes(searchTerm.toLowerCase()) ||
       job.company_name.toLowerCase().includes(searchTerm.toLowerCase()) ||
       job.skills.some((skill) => skill.toLowerCase().includes(searchTerm.toLowerCase()))
     );
     setFilteredJobs(filtered);
-    setCurrentPage(1); // Reset to first page when search changes
+    setCurrentPage(1);
   }, [searchTerm, joblists, postedJobs]);
 
   const indexOfLastJob = currentPage * jobsPerPage;

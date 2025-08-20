@@ -2,46 +2,51 @@ import React, { useEffect, useState } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
 
 const Jobdetails = () => {
-  const { id } = useParams();
+  const { id } = useParams(); // job id from route
   const navigate = useNavigate();
   const [job, setJob] = useState(null);
   const [loading, setLoading] = useState(true);
 
+  const baseURL = 'https://job-portal-data.onrender.com';
+
   useEffect(() => {
-    console.log('Fetching job with ID:', id);
-    fetch('/db.json')
-      .then((res) => res.json())
-      .then((data) => {
-        // Compare as strings since IDs are strings in db.json
-        const foundJob = data.joblists.find(j => j.id === id);
-        console.log('Found job:', foundJob);
-        if (!foundJob) {
-          console.error('Job not found with id:', id);
-          navigate('/not-found');
+    const fetchJob = async () => {
+      try {
+        console.log('Fetching job with ID:', id);
+
+        // Try to get job from /joblists
+        let res = await fetch(`${baseURL}/joblists/${id}`);
+        let data = await res.json();
+
+        if (!data || Object.keys(data).length === 0) {
+          // If not found in /joblists, try /newjobs
+          res = await fetch(`${baseURL}/newjobs/${id}`);
+          data = await res.json();
         }
-        setJob(foundJob);
+
+        if (!data || Object.keys(data).length === 0 || data.error) {
+          console.error('Job not found with id:', id);
+          navigate('/not-found'); // or show "Job not found" UI
+          return;
+        }
+
+        setJob(data);
+      } catch (error) {
+        console.error('Error loading job data:', error);
+      } finally {
         setLoading(false);
-      })
-      .catch((err) => {
-        console.error('Error loading job data:', err);
-        setLoading(false);
-      });
+      }
+    };
+
+    fetchJob();
   }, [id, navigate]);
 
-  if (loading) {
-    return <div className="container py-5 text-center">Loading...</div>;
-  }
-
-  if (!job) {
-    return <div className="container py-5 text-center">Job not found</div>;
-  }
+  if (loading) return <div className="container py-5 text-center">Loading...</div>;
+  if (!job) return <div className="container py-5 text-center">Job not found</div>;
 
   return (
     <div className="container py-5">
-      <button
-        onClick={() => navigate(-1)}
-        className="btn btn-outline-primary mb-4"
-      >
+      <button onClick={() => navigate(-1)} className="btn btn-outline-primary mb-4">
         ← Back to Jobs
       </button>
 
@@ -73,14 +78,14 @@ const Jobdetails = () => {
 
               <h3 className="h5 mb-3">Responsibilities</h3>
               <ul className="mb-4">
-                {job.responsibilities.map((item, index) => (
+                {(job.responsibilities || []).map((item, index) => (
                   <li key={index} className="mb-2">{item}</li>
                 ))}
               </ul>
 
               <h3 className="h5 mb-3">Requirements</h3>
               <ul className="mb-4">
-                {job.requirements.map((item, index) => (
+                {(job.requirements || []).map((item, index) => (
                   <li key={index} className="mb-2">{item}</li>
                 ))}
               </ul>
@@ -91,7 +96,7 @@ const Jobdetails = () => {
                 <div className="card-body">
                   <h4 className="h6 card-title">Job Highlights</h4>
                   <ul className="list-unstyled">
-                    {job.job_highlights.map((highlight, index) => (
+                    {(job.job_highlights || []).map((highlight, index) => (
                       <li key={index} className="mb-2">
                         <i className="bi bi-check-circle-fill text-success me-2"></i>
                         {highlight}
