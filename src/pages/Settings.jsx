@@ -3,9 +3,9 @@ import Esidebar from '../components/Esidebar';
 
 const Settings = () => {
   return (
-    <div style={{ display: 'flex', minHeight: '100vh' }}>
+    <div className='d-md-flex'>
       {/* Sidebar */}
-      <div style={{ }}>
+      <div  >
         <Esidebar />
       </div>
 

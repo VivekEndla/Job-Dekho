@@ -116,8 +116,8 @@ const Createjobs = () => {
   );
 
   return (
-    <div style={{ display: 'flex', minHeight: '100vh' }}>
-      <div style={{ }}>
+    <div className='d-md-flex' >
+      <div >
         <Esidebar />
       </div>
       <div style={{ flex: 1, padding: '30px' }}>

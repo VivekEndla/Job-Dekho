@@ -113,8 +113,8 @@ const Postedjobs = () => {
   });
 
   return (
-    <div style={{ display: 'flex', minHeight: '100vh' }}>
-      <div style={{}}>
+    <div className='d-md-flex'>
+      <div >
         <Esidebar />
       </div>
 

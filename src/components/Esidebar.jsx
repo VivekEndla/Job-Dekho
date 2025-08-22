@@ -57,19 +57,16 @@ const Esidebar = () => {
 
   return (
     <>
-      {/* Toggle button visible only on small screens */}
-      <div className="d-md-none p-2">
+      {/* ✅ Header bar for mobile */}
+      <div className="d-md-none bg-white border-bottom d-flex align-items-center p-2  ">
         <Button
           variant="light"
           onClick={() => setShowSidebar(true)}
-          className="d-flex align-items-center shadow-sm"
-          style={{ border: "1px solid #ccc" }}
+          className="me-2"
         >
-          <i
-            className="bi bi-list text-dark"
-            style={{ fontSize: "1.5rem" }}
-          ></i>
+          <i className="bi bi-list text-dark" style={{ fontSize: "1.5rem" }}></i>
         </Button>
+        <h6 className="m-0 fw-bold text-dark">Employee Menu</h6>
       </div>
 
       {/* Sidebar for medium+ screens */}
@@ -80,7 +77,7 @@ const Esidebar = () => {
         <div className="profile-section text-center">
           <Link to="/profile">
             <img
-              src="./src/assets/boy.png"
+              src="https://i.pravatar.cc/150?img=3"
               alt="Profile"
               className="profile-image mb-2 border border-2 border-primary"
               style={{
@@ -95,7 +92,7 @@ const Esidebar = () => {
           <p className="text-secondary">{employeeData.role}</p>
         </div>
 
-        <div className="sidebar-nav mt-4">
+        <div className="sidebar-nav mt-4 ">
           <NavLink
             to="/postedjobs"
             className="btn btn-outline-primary w-100 mb-2 text-start"
